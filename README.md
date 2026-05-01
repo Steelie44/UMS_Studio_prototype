@@ -121,7 +121,7 @@ This is intentionally simple for now, but it gives immediate feedback about prog
 From PowerShell:
 
 ```powershell
-cd "C:\Users\Edward\Desktop\UMS Studio\UMS Working Copy"
+cd "C:\Users\Jonathan\Desktop\UMS Studio\UMS Working Copy"
 $env:PYTHONPATH = ".\src"
 python -m ums_studio
 ```
@@ -141,7 +141,7 @@ python -m pip install -e ".[dev]"
 ## Running Tests
 
 ```powershell
-cd "C:\Users\Edward\Desktop\UMS Studio\UMS Working Copy"
+cd "C:\Users\Jonathan\Desktop\UMS Studio\UMS Working Copy"
 $env:PYTHONPATH = ".\src"
 python -m pytest -q
 ```
