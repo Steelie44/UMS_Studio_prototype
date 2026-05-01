@@ -1,0 +1,34 @@
+; -----------------------------------------
+; UMS Studio Mock CNC Program
+; Tests motion, feed, spindle, and logging
+; -----------------------------------------
+
+; Home all axes
+HOME ALL
+
+; Move to safe Z
+G0 Z10
+
+; Rapid to start position
+G0 X0 Y0
+
+; Begin test square
+G1 X50 Y0 F500
+G1 X50 Y50
+G1 X0  Y50
+G1 X0  Y0
+
+; Zig-zag test
+G1 X0  Y0
+G1 X50 Y10
+G1 X0  Y20
+G1 X50 Y30
+G1 X0  Y40
+G1 X50 Y50
+
+; Return home
+G0 X0 Y0
+G0 Z0
+
+; End of program
+M30

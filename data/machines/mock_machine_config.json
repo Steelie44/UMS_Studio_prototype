@@ -1,0 +1,57 @@
+{
+    "name": "Mock CNC",
+    "description": "Virtual 3-axis CNC machine for testing UMS Studio.",
+    "version": 1,
+    "axes": {
+        "X": {
+            "min": -200.0,
+            "max": 200.0,
+            "home_direction": -1,
+            "home_offset": 0.0,
+            "steps_per_mm": 100.0
+        },
+        "Y": {
+            "min": -200.0,
+            "max": 200.0,
+            "home_direction": -1,
+            "home_offset": 0.0,
+            "steps_per_mm": 100.0
+        },
+        "Z": {
+            "min": -150.0,
+            "max": 0.0,
+            "home_direction": 1,
+            "home_offset": 0.0,
+            "steps_per_mm": 100.0
+        }
+    },
+    "spindle": {
+        "min_rpm": 0,
+        "max_rpm": 12000,
+        "default_rpm": 6000
+    },
+    "capabilities": {
+        "arcs": true,
+        "spindle": true,
+        "flood_coolant": true,
+        "mist_coolant": true
+    },
+    "feed": {
+        "min_feed": 0,
+        "max_feed": 3000,
+        "default_feed": 1000
+    },
+    "homing": {
+        "sequence": [
+            "Z",
+            "X",
+            "Y"
+        ],
+        "feed_rate": 500,
+        "seek_rate": 2000
+    },
+    "transport": {
+        "type": "mock",
+        "baud": 115200
+    }
+}

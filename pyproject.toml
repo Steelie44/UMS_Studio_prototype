@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ums-studio"
+version = "0.1.0"
+description = "UMS Studio — CNC motion planning, runtime, and UI environment"
+authors = [
+    { name = "Edward" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pyqt6>=6.5",
+    "jinja2>=3.1",
+    "pyserial>=3.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=24.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://example.com"
+Source = "https://example.com/repo"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+ums-studio = "ums_studio.__main__:main"
