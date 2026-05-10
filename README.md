@@ -203,4 +203,4 @@ Planned improvements include:
 
 UMS is intended to become a universal motion-control layer: readable enough for humans, strict enough for machines, and portable enough to target different controllers without rewriting programs for every firmware dialect.
 
-UMS Studio is where that vision is being designed, tested, and proven.
+
